@@ -9,7 +9,7 @@ CoH AI Chatbot is an AI-powered chatbot and resource hub designed to help foster
 - Deployment-ready with HTTPS.
 
 ### Tech Used
-- Backend: Flask API  
+- Backend: Flask API and Vanna AI
 - Frontend: HTML/CSS (chat interface)  
 - Database: MySQL
 - AI Integration: OpenAI API

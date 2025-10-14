@@ -16,6 +16,6 @@ https://coh-ai-chatbot.onrender.com/
 - Frontend: HTML/CSS (chat interface)  
 - Database: MySQL
 - AI Integration: OpenAI API
-- Hosted via Render (https://coh-ai-chatbot.onrender.com/)
+- Hosted via Render (https://coh-ai-chatbot.onrender.com/) (https://dashboard.render.com/web/srv-d3nbcpeuk2gs7386c7jg/metrics)
 
 ### Goal: Provide an accessible, safe, and user-friendly platform for youth to find the local resources they need and take steps toward support and empowerment.

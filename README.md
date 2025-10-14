@@ -6,9 +6,6 @@ https://coh-ai-chatbot.onrender.com/
 
 ### Features
 - AI chatbot that answers natural language queries using a database of trained resources.
-- Category filters (Education, Housing, Mental Health, Legal Aid, etc.).
-- Admin dashboard for securely managing resources.
-- Secure authentication for users and admins.
 - Deployment-ready with HTTPS.
 
 ### Tech Used

@@ -1,0 +1,6 @@
+flask
+vanna
+mistralai
+mysqlclient
+pandas
+chromadb

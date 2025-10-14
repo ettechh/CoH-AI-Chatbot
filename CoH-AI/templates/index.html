@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CoH AI Chatbot</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #080707;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      #chat-box {
+        width: 60%;
+        max-width: 800px;
+        height: 60vh;
+        background: #d9d8d8;
+        border-radius: 10px;
+        overflow-y: scroll;
+        padding: 15px;
+        box-shadow: 0 0 10px #8d8b8b;
+      }
+      .user,
+      .bot {
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .user {
+        background-color: #0cbcf1;
+        text-align: right;
+      }
+      .bot {
+        background-color: #fffafaa1;
+        text-align: left;
+      }
+      form {
+        display: flex;
+        margin-top: 20px;
+        width: 60%;
+        max-width: 800px;
+      }
+      input {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 10px 0 0 10px;
+        font-size: 16px;
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #2196f3;
+        color: white;
+        font-size: 16px;
+        border-radius: 0 10px 10px 0;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #1e88e5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CoH AI Chatbot</h1>
+    <div id="chat-box"></div>
+    <form id="chat-form">
+      <input
+        type="text"
+        name="question"
+        id="question"
+        placeholder="Ask me something..."
+        autocomplete="off"
+        required
+      />
+      <button type="submit">Send</button>
+    </form>
+
+    <script>
+      const form = document.getElementById("chat-form");
+      const chatBox = document.getElementById("chat-box");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const question = document.getElementById("question").value;
+        appendMessage("user", question);
+
+        const response = await fetch("/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams({ question }),
+        });
+
+        const data = await response.json();
+        appendMessage("bot", data.response);
+        document.getElementById("question").value = "";
+      });
+
+      function appendMessage(role, message) {
+        const div = document.createElement("div");
+        div.className = role;
+        div.textContent = message;
+        chatBox.appendChild(div);
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }
+    </script>
+  </body>
+</html>

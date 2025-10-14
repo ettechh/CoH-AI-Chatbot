@@ -17,13 +17,13 @@ class MyVanna(ChromaDB_VectorStore, Mistral):
 vn = MyVanna()
 
 # Connect to your existing MySQL (only if needed for query context)
-vn.connect_to_mysql(
-    host='localhost',
-    dbname='CoH',
-    user='root',
-    password='et1138RWU',
-    port=3306
-)
+# vn.connect_to_mysql(
+#     host='localhost',
+#     dbname='CoH',
+#     user='root',
+#     password='et1138RWU',
+#     port=3306
+# )
 
 print("✅ Loaded Vanna + Mistral with existing trained data.")
 

@@ -5,7 +5,7 @@ CoH AI Chatbot is an AI-powered chatbot and resource hub designed to help foster
 https://coh-ai-chatbot.onrender.com/
 
 ### Features
-- AI chatbot that answers natural language queries using a database of vetted resources.
+- AI chatbot that answers natural language queries using a database of trained resources.
 - Category filters (Education, Housing, Mental Health, Legal Aid, etc.).
 - Admin dashboard for securely managing resources.
 - Secure authentication for users and admins.

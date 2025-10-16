@@ -4,3 +4,4 @@ mistralai
 mysqlclient
 pandas
 chromadb
+pip install python-dotenv

@@ -33,7 +33,7 @@ def index():
 def ask():
     user_input = request.form.get("question", "").strip()
     if not user_input:
-        return jsonify({"error": "No question provided"}), 400
+        return reply("Please type a question.")
 
     try:
         response = client.chat.complete(
@@ -43,10 +43,15 @@ def ask():
                 {"role": "user", "content": user_input},
             ],
         )
-        return jsonify({"response": response.choices[0].message.content})
+        return reply(response.choices[0].message.content)
     except Exception:
         logging.exception("Mistral call failed")
-        return jsonify({"error": "Something went wrong. Please try again."}), 500
+        return reply("Sorry, I'm having trouble right now. Please try again in a moment.")
+
+
+def reply(text):
+    # Same text under several common key names so the page can find it
+    return jsonify({"response": text, "reply": text, "answer": text, "message": text})
 
 
 @app.route("/tip", methods=["POST"])

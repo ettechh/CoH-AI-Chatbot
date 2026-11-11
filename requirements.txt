@@ -1,7 +1,3 @@
 flask
-vanna
 mistralai
-mysqlclient
-pandas
-chromadb
 python-dotenv

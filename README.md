@@ -3,7 +3,7 @@ CoH AI Chatbot is an AI-powered chatbot and resource hub designed to help foster
 
 
 ### Hosted on: 
-https://hope.rwu.me/hope-bot/
+[https://hope.rwu.me/hope-bot/](https://hopeful.rwu.me/hope-bot/)
 ### Website URL 
 https://coh-ai-chatbot.onrender.com/
 ### Features
